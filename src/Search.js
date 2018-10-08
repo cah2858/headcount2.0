@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Search.css'
 
 class Search extends Component {
   constructor() {
@@ -23,8 +24,11 @@ handleChange = (event) => {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} value={this.state.query}/>
-          <button>Search</button>
+          <input 
+            className='searchBar'
+            placeholder='Search for a district'
+            onChange={this.handleChange}
+            value={this.state.query}/>
         </form>
       </div>
     );

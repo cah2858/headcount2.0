@@ -79,10 +79,12 @@ class DistrictRepository {
     const district2Avg = this.findAverage(district2);
     const comparison = district1Avg / district2Avg;
     const formattedComparison = parseFloat((comparison).toFixed(3));
-    const dist1 = ([district1Upper]: district1Avg);
-    const dist2 = ([district2Upper]: district2Avg);
 
-    return {dist1, dist2, compared: formattedComparison};
+    return {
+      [district1Upper]: district1Avg, 
+      [district2Upper]: district2Avg, 
+      compared: formattedComparison
+    };
   }
 }
 

@@ -10,7 +10,7 @@ const Comparison = (props) => {
 
   const card1Info = 
     <div onClick={() => { props.removeSelectedDistrict(dist1.location); }}>
-      <p>{dist1.location}</p>
+      <p className='location'>{dist1.location}</p>
       <div>
         {Object.keys(dist1.stats.data).map(year => {
           return (
@@ -28,7 +28,7 @@ const Comparison = (props) => {
   if (props.selectedDistricts.length > 1) {
     card2Info = 
       <div onClick={() => props.removeSelectedDistrict(dist2.location)}>
-        <p>{dist2.location}</p>
+        <p className='location'>{dist2.location}</p>
         <div>
           {Object.keys(dist2.stats.data).map(year => {
             return (
@@ -46,13 +46,14 @@ const Comparison = (props) => {
 
     comparisonCard = 
       <div>
-        <p>
-          { dist1.location } : { repo.findAverage(dist1.location) }
+        <p className='dist1-location'>
+          { dist1.location }
         </p>
-        <p>
-          { comp.compared }
+          <p className='dist1-stat'>{ repo.findAverage(dist1.location) }</p>
+        <p className='comparison'>&larr; { comp.compared } &rarr;</p>
+        <p className='dist2-location'>{ dist2.location }</p>
+        <p className='dist2-stat'>{ repo.findAverage(dist2.location) }
         </p>
-        <p>{ dist2.location } : { repo.findAverage(dist2.location) }</p>
       </div>;
   }
 
