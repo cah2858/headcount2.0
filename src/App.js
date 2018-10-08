@@ -35,8 +35,7 @@ class App extends Component {
   }
 
   addSelectedDistrict = (location, stats, state) => {
-    console.log(location, stats, state)
-    const selectedDistrict = {location: location, stats: stats};
+    const selectedDistrict = {location: location, stats: stats, state: state};
     const selectedLocations = this.state.selectedDistricts.map(district => {
       return district.location; 
     });

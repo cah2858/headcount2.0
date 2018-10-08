@@ -3,8 +3,37 @@
   justify-content: center;
 }
 
+.comparisonCard {
+  border: none;
+  box-shadow: none;
+  padding-top: 50px;
+}
+
 .comparisonCard:hover {
   cursor: auto;
   transform: none;
   transition: none;
+}
+
+.dist1-location {
+  font-size: 1.2;
+  font-weight: bold;
+}
+
+.dist2-location {
+  padding-top: 50px;
+  font-size: 1.2;
+  font-weight: bold;
+}
+
+.comparison {
+  font-weight: bold;
+}
+
+.dist1-stat {
+  padding-bottom: 50px;
+
+}
+.dist2-stat {
+
 }

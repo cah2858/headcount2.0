@@ -1,0 +1,11 @@
+.title {
+  font-size: 3em;
+  margin: 30px;
+  font-weight: bold;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -29,7 +29,7 @@ class DistrictCard extends Component {
     <div 
       className='card' 
       onClick={() => this.selectCard(location, stats)}>
-      <p>{location}</p>
+      <p className='location'>{location}</p>
       { info }
     </div>
     );
